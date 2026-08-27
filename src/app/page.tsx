@@ -1,4 +1,10 @@
 import Faq from "@/components/Faq";
+import {
+  YogaIcon,
+  PilatesIcon,
+  SoundIcon,
+  MovementIcon,
+} from "@/components/HostIcons";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -117,10 +123,22 @@ export default function Home() {
             We <span className="italic">host</span>
           </h2>
           <div className="wehost__grid">
-            <div className="host-card">Yoga</div>
-            <div className="host-card">Pilates</div>
-            <div className="host-card">Sound</div>
-            <div className="host-card">Movement</div>
+            <div className="host-card">
+              <YogaIcon className="host-card__icon" />
+              <span className="host-card__label">Yoga</span>
+            </div>
+            <div className="host-card">
+              <PilatesIcon className="host-card__icon" />
+              <span className="host-card__label">Pilates</span>
+            </div>
+            <div className="host-card">
+              <SoundIcon className="host-card__icon" />
+              <span className="host-card__label">Sound</span>
+            </div>
+            <div className="host-card">
+              <MovementIcon className="host-card__icon" />
+              <span className="host-card__label">Movement</span>
+            </div>
           </div>
           <p className="wehost__note">
             Plus events, workshops and shared experiences alongside yoga on the
@@ -159,43 +177,68 @@ export default function Home() {
         </section>
 
         {/* ================= Section 4 — Pricing ================= */}
-        <section className="shell pricing" id="pricing" aria-label="Pricing">
-          <div className="pricing__grid">
-            <article className="price-card price-card--wide price-card--feature">
-              <div className="price-card__head">
-                <div>
-                  <h3 className="price-card__name">10 Class Pack</h3>
-                  <p className="price-card__offer">Summer offer, save £30</p>
-                </div>
-                <a className="btn btn--accent" href="#">
-                  JOIN US
+        <section className="shell pricing" id="pricing" aria-labelledby="pricing-title">
+          <h2 id="pricing-title" className="section-title pricing__title">
+            <span className="italic">Pricing</span>
+          </h2>
+
+          <div className="pricing__stack">
+            {/* Featured banner */}
+            <article className="price-banner price-banner--featured">
+              <div className="price-banner__info">
+                <p className="price-card__overline">FEATURED</p>
+                <h3 className="price-card__name">10 Class Pack</h3>
+                <p className="price-card__sub">Summer offer, save £30</p>
+              </div>
+              <div className="price-banner__buy">
+                <span className="price-card__price">£60.00</span>
+                <a className="btn btn--accent price-cta" href="#">
+                  Buy pack <span aria-hidden="true">→</span>
                 </a>
               </div>
-              <p className="price-card__price">£60.00</p>
             </article>
 
-            <article className="price-card">
-              <div className="price-card__head">
-                <div>
-                  <h3 className="price-card__name">5 Class Pack</h3>
-                  <p className="price-card__offer">Summer Social, save £15</p>
+            {/* Two central cards (taller) */}
+            <div className="pricing__row">
+              <article className="price-card">
+                <div className="price-card__info">
+                  <h3 className="price-card__name">5 class pack</h3>
+                  <p className="price-card__sub">Summer Social, save £15</p>
                 </div>
-              </div>
-              <p className="price-card__price">£35.00</p>
-            </article>
+                <div className="price-card__foot">
+                  <span className="price-card__price">£35.00</span>
+                  <a className="btn price-cta price-cta--outline" href="#">
+                    Buy pack
+                  </a>
+                </div>
+              </article>
 
-            <article className="price-card">
-              <div className="price-card__head">
-                <h3 className="price-card__name">Drop in Class</h3>
-              </div>
-              <p className="price-card__price">£15.00</p>
-            </article>
+              <article className="price-card">
+                <div className="price-card__info">
+                  <h3 className="price-card__name">Drop in Class</h3>
+                  <p className="price-card__sub">Single class, no commitment</p>
+                </div>
+                <div className="price-card__foot">
+                  <span className="price-card__price">£15.00</span>
+                  <a className="btn price-cta price-cta--outline" href="#">
+                    Book class
+                  </a>
+                </div>
+              </article>
+            </div>
 
-            <article className="price-card price-card--wide">
-              <div className="price-card__head">
-                <h3 className="price-card__name">Unlimited Membership</h3>
+            {/* Membership banner */}
+            <article className="price-banner price-banner--membership">
+              <h3 className="price-card__name">Unlimited Membership</h3>
+              <div className="price-banner__buy">
+                <span className="price-line">
+                  <span className="price-card__price">£89.00</span>
+                  <span className="price-card__per">/ month</span>
+                </span>
+                <a className="btn btn--accent price-cta" href="#">
+                  Join
+                </a>
               </div>
-              <p className="price-card__price">£89.00 / month</p>
             </article>
           </div>
 
