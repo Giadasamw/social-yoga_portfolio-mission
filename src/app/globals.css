@@ -345,7 +345,10 @@ p {
   font-size: var(--fs-h2);
   color: var(--color-primary);
   line-height: var(--lh-head);
-  flex: 0 0 21.3125em; /* 341px */
+  /* Width must track the fluid root unit, NOT this element's own 37px
+     font-size — otherwise `em` here would compute 21.3125 * 37px. */
+  flex: 0 0 calc(21.3125 * var(--size-font)); /* 341px */
+  max-width: 100%;
 }
 .intro__cols {
   display: flex;
@@ -353,6 +356,9 @@ p {
   color: var(--color-bg);
   font-size: var(--fs-body);
   line-height: 1.4;
+}
+.intro__cols p {
+  flex: 1 1 0;
 }
 
 /* ---- Section 2 — We host ---- */
