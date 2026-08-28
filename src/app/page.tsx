@@ -457,34 +457,37 @@ export default function Home() {
             height={107}
           />
           <div className="footer__cols">
-            <div className="footer__brand">
-              <div className="loc-chip loc-chip--dark">
-                <span className="loc-chip__name">SOCIAL YOGA</span>
-                <span className="loc-chip__row">
-                  <img
-                    className="loc-chip__pin"
-                    src="/assets/images/pin-cream-1.svg"
-                    alt=""
-                    aria-hidden="true"
-                    width={7}
-                    height={10}
-                  />
-                  <span className="loc-chip__place">FISH ISLAND</span>
-                </span>
-              </div>
-              <div className="loc-chip loc-chip--dark">
-                <span className="loc-chip__name">SOCIAL YOGA</span>
-                <span className="loc-chip__row">
-                  <img
-                    className="loc-chip__pin"
-                    src="/assets/images/pin-cream-2.svg"
-                    alt=""
-                    aria-hidden="true"
-                    width={7}
-                    height={10}
-                  />
-                  <span className="loc-chip__place">HACKNEY CENTRAL</span>
-                </span>
+            <div className="footer-col footer__brand">
+              <p className="footer-col__title">LOCATIONS</p>
+              <div className="footer__brand-chips">
+                <div className="loc-chip loc-chip--dark">
+                  <span className="loc-chip__name">SOCIAL YOGA</span>
+                  <span className="loc-chip__row">
+                    <img
+                      className="loc-chip__pin"
+                      src="/assets/images/pin-cream-1.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width={7}
+                      height={10}
+                    />
+                    <span className="loc-chip__place">FISH ISLAND</span>
+                  </span>
+                </div>
+                <div className="loc-chip loc-chip--dark">
+                  <span className="loc-chip__name">SOCIAL YOGA</span>
+                  <span className="loc-chip__row">
+                    <img
+                      className="loc-chip__pin"
+                      src="/assets/images/pin-cream-2.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width={7}
+                      height={10}
+                    />
+                    <span className="loc-chip__place">HACKNEY CENTRAL</span>
+                  </span>
+                </div>
               </div>
             </div>
 
